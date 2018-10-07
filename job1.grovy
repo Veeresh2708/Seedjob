@@ -1,10 +1,11 @@
-freeStyleJob("Freestyle1"){
+def jobs=["job1","job2","job3"]
+jobs.each{
+freeStyleJob("${it}"){
 description("This is a test")
 steps{
-maven{
+    maven{
 goals("clean install")
     }
-  }
 scm{
   git{
     remote {
@@ -12,4 +13,5 @@ scm{
       }
     }
   }
+}
 }
