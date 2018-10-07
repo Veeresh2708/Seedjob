@@ -1,5 +1,10 @@
 freeStyleJob("Freestyle1"){
 description("This is a test")
+steps{
+maven{
+goals("clean install")
+    }
+  }
 scm{
   git{
     remote {
