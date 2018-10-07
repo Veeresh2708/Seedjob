@@ -11,7 +11,7 @@ goals("clean install")
 scm{
   git{
     remote {
-      url("${jongitmap[$jobname]}")
+      url("${jobgitmap[$jobname]}")
       }
     }
   }
