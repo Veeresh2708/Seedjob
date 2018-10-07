@@ -1,5 +1,7 @@
 def jobs=["job1","job2","job3"]
+def jobgitmap=["job1":"https://github.com/Veeresh2704.git","job2":"https://github.com/Veeresh2705.git","job3":"https://github.com/Veeresh2705.git"]
 jobs.each{
+def jobname="${it}"
 freeStyleJob("${it}"){
 description("This is a test")
 steps{
@@ -9,7 +11,7 @@ goals("clean install")
 scm{
   git{
     remote {
-      url("https://github.com/Veeresh2708/Maven.git")
+      url("${jongitmap[$jobname]}")
       }
     }
   }
