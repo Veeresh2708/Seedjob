@@ -1,1 +1,10 @@
-freeStyleJob("Freestyle1")
+freeStyleJob("Freestyle1"){
+description("This is a test")
+scm{
+  git{
+    remote {
+      url("https://github.com/Veeresh2708/Maven.git")
+      }
+    }
+  }
+}
