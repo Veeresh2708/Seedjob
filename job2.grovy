@@ -1,5 +1,5 @@
 freeStyleJob("Freestyle2") {
-blockOn("Freestyle1")
+blockOn("Freestyle")
     logRotator(-1, 10)
     jdk('Java 6')
     scm {
